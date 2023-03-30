@@ -13,7 +13,7 @@ namespace MobileGateway.API.Services
             ContentDTOs = ReadFromFile();
         }
 
-        public void DeleteContentDTO(string id)
+        public void DeleteContentDTO(int id)
         {
             ContentDTOs.Remove(GetContentDTO(id));
             WriteToFile();
@@ -24,9 +24,9 @@ namespace MobileGateway.API.Services
             return ContentDTOs;
         }
 
-        public ContentDTO GetContentDTO(string id)
+        public ContentDTO GetContentDTO(int id)
         {
-            return ContentDTOs.Single(c => c.Id.Equals(id));
+            return ContentDTOs.First(c => c.Id.Equals(id));
         }
 
         public void UpdateContentDTO(ContentDTO contentDTO)
@@ -43,7 +43,7 @@ namespace MobileGateway.API.Services
             WriteToFile();
         }
 
-        public void AddContentCTO(ContentDTO contentDTO)
+        public void AddContentDTO(ContentDTO contentDTO)
         {
             ContentDTOs.Add(contentDTO);
             WriteToFile();

@@ -6,9 +6,9 @@ namespace MobileGateway.API.Services.Contracts
     {
         // This is a temporary datahandler for testing purposes
         public List<ContentDTO> GetAllContentDTOs();
-        public ContentDTO GetContentDTO(string id);
+        public ContentDTO GetContentDTO(int id);
         public void UpdateContentDTO(ContentDTO contentDTO);
-        public void AddContentCTO(ContentDTO contentDTO);
-        public void DeleteContentDTO(string id);
+        public void AddContentDTO(ContentDTO contentDTO);
+        public void DeleteContentDTO(int id);
     }
 }

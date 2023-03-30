@@ -30,7 +30,7 @@ namespace MobileGateway.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<ContentDTO> GetContent(string id)
+        public ActionResult<ContentDTO> GetContent(int id)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace MobileGateway.API.Controllers
         {
             try
             {
-                _datahandler.AddContentCTO(content);
+                _datahandler.AddContentDTO(content);
                 return Ok();
             }
             catch (Exception e)
@@ -72,7 +72,7 @@ namespace MobileGateway.API.Controllers
         }
 
         [HttpDelete]
-        public ActionResult DeleteContent(string id)
+        public ActionResult DeleteContent(int id)
         {
             try
             {

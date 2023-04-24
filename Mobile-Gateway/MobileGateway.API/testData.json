@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "type": "News",
+    "title": "Test News",
+    "sites": [
+      "Ordbogen.com"
+    ],
+    "body": "blablabla and hmhmhmhm. general kenobi says hello there",
+    "image": "string",
+    "startDate": "24/4/2023",
+    "endDate": "29/4/2023"
+  },
+  {
+    "id": 2,
+    "type": "News",
+    "title": "Test News 2 electric boogaloo",
+    "sites": [
+      "Ordbogen.com"
+    ],
+    "body": "blablabla and hmhmhmhm. general kenobi says hello there. same body but different",
+    "image": "string",
+    "startDate": "24/4/2023",
+    "endDate": "29/4/2023"
+  }
+]

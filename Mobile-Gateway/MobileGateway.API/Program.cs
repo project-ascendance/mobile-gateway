@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IDatahandler, DataHandler>();
+builder.WebHost.UseUrls("http://0.0.0.0:30000");
 
 var app = builder.Build();
 

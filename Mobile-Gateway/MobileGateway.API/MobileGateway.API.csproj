@@ -16,6 +16,10 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Services\Contracts\DTOFactories\" />
+    <Folder Include="Services\Contracts\DomainEntityFactories\" />
+    <Folder Include="Services\DTOFactories\" />
+    <Folder Include="Services\DomainEntityFactories\" />
   </ItemGroup>
 
   <ItemGroup>

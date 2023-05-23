@@ -71,7 +71,7 @@ namespace MobileGateway.API.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public ActionResult DeleteContent(int id)
         {
             try

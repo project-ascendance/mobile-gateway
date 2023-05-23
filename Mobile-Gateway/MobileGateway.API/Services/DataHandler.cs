@@ -1,5 +1,6 @@
 ﻿using MobileGateway.API.Services.Contracts;
 using MobileGateway.Models.DTOs.Content;
+using System.Linq;
 using System.Text.Json;
 
 namespace MobileGateway.API.Services
@@ -11,6 +12,26 @@ namespace MobileGateway.API.Services
         public DataHandler()
         {
             ContentDTOs = ReadFromFile();
+            bool idsUpdated = false;
+            if (ContentDTOs != null && ContentDTOs.Any())
+            {
+                foreach (ContentDTO contentDTO in ContentDTOs)
+                {
+                    while (ContentDTOs.Count(x => contentDTO.Id == x.Id) > 1)
+                    {
+                        contentDTO.Id++;
+                        idsUpdated = true;
+                    }
+                }
+                if (idsUpdated)
+                {
+                    WriteToFile();
+                }
+            } else
+            {
+                // This should never run.
+                ContentDTOs = new List<ContentDTO>();
+            }
         }
 
         public void DeleteContentDTO(int id)

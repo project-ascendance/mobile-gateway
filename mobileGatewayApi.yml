@@ -1,0 +1,17 @@
+version: '3.4'
+
+services: 
+  gateway-api:
+    
+    build:
+      context: Mobile-Gateway
+      dockerfile: MobileGateway.API\bin\Release\net7.0\publish\Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=apollo1150
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/etc/letsencrypt/live/ascendance.hrmoller.com/ascendance_pfx.pfx
+    volumes:
+      - /home/henrik/certbot/conf/:/etc/letsencrypt/:ro

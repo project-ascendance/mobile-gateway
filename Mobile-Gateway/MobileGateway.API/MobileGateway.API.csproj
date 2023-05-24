@@ -9,17 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="Services\Contracts\DomainEntityFactories\**" />
+    <Compile Remove="Services\Contracts\DTOFactories\**" />
+    <Compile Remove="Services\DomainEntityFactories\**" />
+    <Compile Remove="Services\DTOFactories\**" />
+    <Content Remove="Data\**" />
+    <Content Remove="Services\Contracts\DomainEntityFactories\**" />
+    <Content Remove="Services\Contracts\DTOFactories\**" />
+    <Content Remove="Services\DomainEntityFactories\**" />
+    <Content Remove="Services\DTOFactories\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Services\Contracts\DomainEntityFactories\**" />
+    <EmbeddedResource Remove="Services\Contracts\DTOFactories\**" />
+    <EmbeddedResource Remove="Services\DomainEntityFactories\**" />
+    <EmbeddedResource Remove="Services\DTOFactories\**" />
+    <None Remove="Data\**" />
+    <None Remove="Services\Contracts\DomainEntityFactories\**" />
+    <None Remove="Services\Contracts\DTOFactories\**" />
+    <None Remove="Services\DomainEntityFactories\**" />
+    <None Remove="Services\DTOFactories\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Services\Contracts\DTOFactories\" />
-    <Folder Include="Services\Contracts\DomainEntityFactories\" />
-    <Folder Include="Services\DTOFactories\" />
-    <Folder Include="Services\DomainEntityFactories\" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>

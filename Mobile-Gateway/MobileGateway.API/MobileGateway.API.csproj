@@ -41,4 +41,10 @@
     <ProjectReference Include="..\MobileGateway.Models\MobileGateway.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
